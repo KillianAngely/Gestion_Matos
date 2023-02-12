@@ -62,9 +62,9 @@ namespace Gestion_Matos
 
             try
             {
-                SqlCommand cmd = new SqlCommand(" Insert into Site values (@Name,@Postcode,@City,@Adress)", conn);
+                SqlCommand cmd = new SqlCommand(" Insert into Site values (@Name_site,@Postcode,@City,@Adress)", conn);
                 conn.Open();
-                cmd.Parameters.AddWithValue("@Name", NameSites);
+                cmd.Parameters.AddWithValue("@Name_site", NameSites);
                 cmd.Parameters.AddWithValue("@Postcode", NamePostcode);
                 cmd.Parameters.AddWithValue("@City", NameCity);
                 cmd.Parameters.AddWithValue("@Adress", NameAdress);
@@ -82,22 +82,24 @@ namespace Gestion_Matos
         private void buttonRemovesite_Click(object sender, EventArgs e)
         {
             string selected_eid = dataGridView1.CurrentRow.Cells["Id_site"].Value.ToString();
-            string selected_Name= dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
+            string selected_Name= dataGridView1.CurrentRow.Cells["Name_site"].Value.ToString();
             string selected_Postcode = dataGridView1.CurrentRow.Cells["Postcode"].Value.ToString();
             string selected_City = dataGridView1.CurrentRow.Cells["City"].Value.ToString();
             string selected_Adress = dataGridView1.CurrentRow.Cells["Adress"].Value.ToString();
             try
             {
-                SqlCommand cmd  = new SqlCommand(" delete from Site where Id_site = @Id_site AND Name = @Name AND Postcode = @Postcode AND City = @City AND Adress = @Adress", conn);
+                SqlCommand cmd  = new SqlCommand(" delete from Site where Id_site = @Id_site AND Name_site = @Name_site AND Postcode = @Postcode AND City = @City AND Adress = @Adress", conn);
                 conn.Open();
                 cmd.Parameters.AddWithValue("@Id_site", selected_eid);
-                cmd.Parameters.AddWithValue("@Name", selected_Name);
+                cmd.Parameters.AddWithValue("@Name_site", selected_Name);
                 cmd.Parameters.AddWithValue("@Postcode", selected_Postcode);
                 cmd.Parameters.AddWithValue("@City", selected_City);
                 cmd.Parameters.AddWithValue("@Adress", selected_Adress);
                 cmd.ExecuteNonQuery();
                 Showdata_site();
                 conn.Close();
+
+                MessageBox.Show("Your data has succesfully delete");
             }
             catch
             {
@@ -115,16 +117,17 @@ namespace Gestion_Matos
 
             try
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Site SET Name = @Name, Postcode = @Postcode, City = @City, Adress = @Adress WHERE Id_site = @Id_site", conn);
+                SqlCommand cmd = new SqlCommand("UPDATE Site SET Name_site = @Name_site, Postcode = @Postcode, City = @City, Adress = @Adress WHERE Id_site = @Id_site", conn);
                 conn.Open();
                 cmd.Parameters.AddWithValue("Id_site", selected_eid);
-                cmd.Parameters.AddWithValue("Name", NameSites);
+                cmd.Parameters.AddWithValue("Name_site", NameSites);
                 cmd.Parameters.AddWithValue("Postcode", NamePostcode);
                 cmd.Parameters.AddWithValue("City", NameCity);
                 cmd.Parameters.AddWithValue("Adress", NameAdress);
                 cmd.ExecuteNonQuery();
                 Showdata_site();
                 conn.Close();
+                MessageBox.Show("Your data has succefully modify");
             }
             catch
             {
@@ -137,7 +140,7 @@ namespace Gestion_Matos
             DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
 
-            textBoxName.Text = row.Cells["Name"].Value.ToString();
+            textBoxName.Text = row.Cells["Name_site"].Value.ToString();
             textBoxAdress.Text = row.Cells["Adress"].Value.ToString();
             textBoxCity.Text = row.Cells["City"].Value.ToString();
             textBoxPostCode.Text = row.Cells["Postcode"].Value.ToString();

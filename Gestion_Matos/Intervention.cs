@@ -175,5 +175,51 @@ namespace Gestion_Matos
                 MessageBox.Show("Failed to Add Intervention");
             }
         }
+        
+        private void buttonRemoveInst_Click(object sender, EventArgs e)
+        {
+            string selected_inter = dataGridView1.CurrentRow.Cells["Id_inter"].Value.ToString();
+            try
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand("delete from Intervention where Id_inter = @Id_inter", conn);
+                cmd.Parameters.AddWithValue("@Id_inter",selected_inter );
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Intervention Deleted");
+                conn.Close();
+                showdata();
+            }
+            catch
+            {
+                MessageBox.Show("Failed to Delete Intervention");
+            }
+        }
+
+        private void buttonModifyInst_Click(object sender, EventArgs e)
+        {
+            string datinstall = dateTimePickerinter.Value.ToString("yyyy-MM-dd");
+            string selected_inter = dataGridView1.CurrentRow.Cells["Id_inter"].Value.ToString();
+            try
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand("update Intervention set Date_inter = @Date_inter, Comment = @Comment, Id_tech = @Id_tech, Id_Mat = @Id_Mat, Id_site = @Id_site where Id_inter = @Id_inter", conn);
+                cmd.Parameters.AddWithValue("@Date_inter", datinstall);
+                cmd.Parameters.AddWithValue("@Comment", textBoxComment.Text);
+                cmd.Parameters.AddWithValue("@Id_tech", idt);
+                cmd.Parameters.AddWithValue("@Id_Mat", idm);
+                cmd.Parameters.AddWithValue("@Id_site", ids);
+                cmd.Parameters.AddWithValue("@Id_inter", selected_inter );
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Intervention Modified");
+                conn.Close();
+                showdata();
+            }
+            catch
+            {
+                MessageBox.Show("Failed to Modify Intervention");
+            }
+        }
     }
 }

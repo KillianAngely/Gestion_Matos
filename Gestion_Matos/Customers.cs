@@ -39,7 +39,7 @@ namespace Gestion_Matos
             adpt = new SqlDataAdapter("select * from Customers",conn);
             dt = new DataTable();
             adpt.Fill(dt);
-            /*dataGridView1.DataSource = dt;*/
+            dataGridView1.DataSource = dt;
         }
 
 
@@ -138,10 +138,12 @@ namespace Gestion_Matos
             string selected_Phone = dataGridView1.CurrentRow.Cells["Phone"].Value.ToString();
 
             try
-            {
-                SqlCommand delete_row = new SqlCommand("delete from Customers where Id_Cust = @Id_Cust AND Name = @Name AND Email = @Email AND Adress = @Adress AND Phone = @Phone", conn);
+            {     
 
-                conn.Open();
+                    SqlCommand delete_row = new SqlCommand("Delete from customers where Id_Cust = @Id_Cust ", conn);
+                
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
 
                 delete_row.Parameters.AddWithValue("@Id_Cust", selected_eid);
                 delete_row.Parameters.AddWithValue("@Name", select_Name);

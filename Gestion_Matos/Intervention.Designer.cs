@@ -67,6 +67,7 @@
             this.buttonRemoveInst.TabIndex = 28;
             this.buttonRemoveInst.Text = "Remove";
             this.buttonRemoveInst.UseVisualStyleBackColor = true;
+            this.buttonRemoveInst.Click += new System.EventHandler(this.buttonRemoveInst_Click);
             // 
             // buttonModifyInst
             // 
@@ -77,6 +78,7 @@
             this.buttonModifyInst.TabIndex = 27;
             this.buttonModifyInst.Text = "Modify";
             this.buttonModifyInst.UseVisualStyleBackColor = true;
+            this.buttonModifyInst.Click += new System.EventHandler(this.buttonModifyInst_Click);
             // 
             // buttonAddInt
             // 

@@ -82,7 +82,7 @@ namespace Gestion_Matos
             {
 
                 conn.Open();
-                SqlCommand update_row = new SqlCommand(" UPDATE Technician SET Name = @Name, Phone = @Phone WHERE Id_Tech = @Id_Tech ", conn);
+                SqlCommand update_row = new SqlCommand(" UPDATE Technician SET Name_tech = @Name, Phone = @Phone WHERE Id_Tech = @Id_Tech ", conn);
 
                 update_row.Parameters.AddWithValue("@Id_Tech", selected_eid);
                 update_row.Parameters.AddWithValue("@Name", select_Name);
@@ -100,12 +100,12 @@ namespace Gestion_Matos
             private void buttonRemoveTech_Click(object sender, EventArgs e)
         {
             string selected_eid = dataGridView1.CurrentRow.Cells["Id_tech"].Value.ToString();
-            string select_Name = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
+            string select_Name = dataGridView1.CurrentRow.Cells["Name_tech"].Value.ToString();
             string select_Phone = dataGridView1.CurrentRow.Cells["Phone"].Value.ToString();
 
             try
             {
-                SqlCommand delete_row = new SqlCommand("delete from Technician where Id_tech = @Id_tech AND Name = @Name AND Phone = @Phone", conn);
+                SqlCommand delete_row = new SqlCommand("delete from Technician where Id_tech = @Id_tech AND Name_tech = @Name AND Phone = @Phone", conn);
 
                 conn.Open();
 
@@ -130,7 +130,7 @@ namespace Gestion_Matos
             DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
 
-            textBoxNameTech.Text = row.Cells["Name"].Value.ToString();
+            textBoxNameTech.Text = row.Cells["Name_tech"].Value.ToString();
             textBoxPhoneTech.Text = row.Cells["Phone"].Value.ToString();
         }
     }

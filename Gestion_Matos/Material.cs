@@ -41,7 +41,7 @@ namespace Gestion_Matos
             adpt = new SqlDataAdapter("select m.Id_Mat as Id_Mat, m.Name_Mat as nameMat, " +
                 "m.Serial_Num as SerialMat, m.Date_instal as DateMat,m.MTBF as MTBFMat, " +
                 "t.Name as nameType, b.Name as nameBrand, c.Name as nameCustomer ," +
-                "s.Name as nameSite from Material m join Site s on " +
+                "s.Name_site as nameSite from Material m join Site s on " +
                 "m.Id_site = s.Id_site join Type t on m.Id_Type = t.Id_Type join Brand b " +
                 "on m.id_brand = b.id_brand join Customers c on m.Id_Cust = c.Id_Cust", conn);
             dt = new DataTable();
@@ -110,7 +110,7 @@ namespace Gestion_Matos
                 conn.Open();
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select Id_site,Name from Site";
+                cmd.CommandText = "Select Id_site,Name_site from Site";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -118,7 +118,7 @@ namespace Gestion_Matos
                 IdObjItem idc;
                 foreach (DataRow dr in dt.Rows)
                 {
-                    idc = new IdObjItem(Convert.ToInt32(dr["Id_site"]), dr["Name"].ToString());
+                    idc = new IdObjItem(Convert.ToInt32(dr["Id_site"]), dr["Name_site"].ToString());
                     comboBoxSite.Items.Add(idc);
                 }
                 conn.Close();
@@ -253,7 +253,9 @@ namespace Gestion_Matos
             {
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
-                SqlCommand cmd = new SqlCommand("DELETE FROM Material WHERE Id_Mat = @idsupermat", conn);
+                SqlCommand cmd = new SqlCommand("DELETE FROM Intervention WHERE Id_Mat " +
+                    "IN(SELECT Id_Mat FROM Material WHERE Id_Mat = @idsupermat)" +
+                    "DELETE FROM Material WHERE Id_Mat = @idsupermat", conn) ;
                 cmd.Parameters.AddWithValue("@idsupermat", selected_eid);
                 cmd.ExecuteNonQuery();
                 showdata();
