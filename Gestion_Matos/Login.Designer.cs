@@ -1,16 +1,16 @@
 ﻿namespace Gestion_Matos
 {
-    partial class Form_login_window
+    partial class Login
     {
         /// <summary>
-        /// Variable nécessaire au concepteur.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Nettoyage des ressources utilisées.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,126 +20,91 @@
             base.Dispose(disposing);
         }
 
-        #region Code généré par le Concepteur Windows Form
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-        /// le contenu de cette méthode avec l'éditeur de code.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_name_gestion_matos = new System.Windows.Forms.Label();
-            this.label_login = new System.Windows.Forms.Label();
-            this.label_password = new System.Windows.Forms.Label();
-            this.button_connexion = new System.Windows.Forms.Button();
-            this.textBox_login = new System.Windows.Forms.TextBox();
-            this.textBox_password = new System.Windows.Forms.TextBox();
-            this.labelheaderlogin = new System.Windows.Forms.Label();
-            this.button_cancel = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label_name_gestion_matos
+            // buttonCancel
             // 
-            this.label_name_gestion_matos.AutoSize = true;
-            this.label_name_gestion_matos.Location = new System.Drawing.Point(153, 405);
-            this.label_name_gestion_matos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_name_gestion_matos.Name = "label_name_gestion_matos";
-            this.label_name_gestion_matos.Size = new System.Drawing.Size(155, 20);
-            this.label_name_gestion_matos.TabIndex = 0;
-            this.label_name_gestion_matos.Text = "Gestion-Matos-2022";
+            this.buttonCancel.Location = new System.Drawing.Point(63, 340);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(181, 58);
+            this.buttonCancel.TabIndex = 0;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // label_login
+            // buttonAdd
             // 
-            this.label_login.AutoSize = true;
-            this.label_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_login.Location = new System.Drawing.Point(56, 100);
-            this.label_login.Name = "label_login";
-            this.label_login.Size = new System.Drawing.Size(73, 29);
-            this.label_login.TabIndex = 1;
-            this.label_login.Text = "Login";
+            this.buttonAdd.Location = new System.Drawing.Point(250, 340);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(181, 58);
+            this.buttonAdd.TabIndex = 1;
+            this.buttonAdd.Text = "Add";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // label_password
+            // textBoxPassword
             // 
-            this.label_password.AutoSize = true;
-            this.label_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_password.Location = new System.Drawing.Point(57, 194);
-            this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(120, 29);
-            this.label_password.TabIndex = 2;
-            this.label_password.Text = "Password";
+            this.textBoxPassword.Location = new System.Drawing.Point(59, 207);
+            this.textBoxPassword.Multiline = true;
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(320, 37);
+            this.textBoxPassword.TabIndex = 2;
+            this.textBoxPassword.Text = "Wabruq91*";
             // 
-            // button_connexion
+            // textBoxName
             // 
-            this.button_connexion.Location = new System.Drawing.Point(227, 320);
-            this.button_connexion.Name = "button_connexion";
-            this.button_connexion.Size = new System.Drawing.Size(159, 48);
-            this.button_connexion.TabIndex = 3;
-            this.button_connexion.Text = "Connexion";
-            this.button_connexion.UseVisualStyleBackColor = true;
-            this.button_connexion.Click += new System.EventHandler(this.button_connexion_Click);
+            this.textBoxName.Location = new System.Drawing.Point(63, 122);
+            this.textBoxName.Multiline = true;
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(320, 37);
+            this.textBoxName.TabIndex = 4;
+            this.textBoxName.Text = "Killian";
             // 
-            // textBox_login
+            // label1
             // 
-            this.textBox_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_login.Location = new System.Drawing.Point(62, 132);
-            this.textBox_login.Multiline = true;
-            this.textBox_login.Name = "textBox_login";
-            this.textBox_login.Size = new System.Drawing.Size(322, 39);
-            this.textBox_login.TabIndex = 4;
-            this.textBox_login.Text = "Admin";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(63, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Username";
             // 
-            // textBox_password
+            // label2
             // 
-            this.textBox_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_password.Location = new System.Drawing.Point(62, 226);
-            this.textBox_password.Multiline = true;
-            this.textBox_password.Name = "textBox_password";
-            this.textBox_password.PasswordChar = '*';
-            this.textBox_password.Size = new System.Drawing.Size(322, 39);
-            this.textBox_password.TabIndex = 5;
-            this.textBox_password.Text = "Admin";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(63, 181);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Password";
             // 
-            // labelheaderlogin
-            // 
-            this.labelheaderlogin.AutoSize = true;
-            this.labelheaderlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelheaderlogin.Location = new System.Drawing.Point(105, 55);
-            this.labelheaderlogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelheaderlogin.Name = "labelheaderlogin";
-            this.labelheaderlogin.Size = new System.Drawing.Size(232, 37);
-            this.labelheaderlogin.TabIndex = 6;
-            this.labelheaderlogin.Text = " Gestion Matos";
-            this.labelheaderlogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // button_cancel
-            // 
-            this.button_cancel.Location = new System.Drawing.Point(61, 320);
-            this.button_cancel.Name = "button_cancel";
-            this.button_cancel.Size = new System.Drawing.Size(159, 48);
-            this.button_cancel.TabIndex = 7;
-            this.button_cancel.Text = "Cancel";
-            this.button_cancel.UseVisualStyleBackColor = true;
-            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
-            // 
-            // Form_login_window
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 495);
-            this.ControlBox = false;
-            this.Controls.Add(this.button_cancel);
-            this.Controls.Add(this.labelheaderlogin);
-            this.Controls.Add(this.textBox_password);
-            this.Controls.Add(this.textBox_login);
-            this.Controls.Add(this.button_connexion);
-            this.Controls.Add(this.label_password);
-            this.Controls.Add(this.label_login);
-            this.Controls.Add(this.label_name_gestion_matos);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Form_login_window";
+            this.ClientSize = new System.Drawing.Size(463, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.buttonAdd);
+            this.Controls.Add(this.buttonCancel);
+            this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -148,14 +113,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label_name_gestion_matos;
-        private System.Windows.Forms.Label label_login;
-        private System.Windows.Forms.Label label_password;
-        private System.Windows.Forms.Button button_connexion;
-        private System.Windows.Forms.TextBox textBox_login;
-        private System.Windows.Forms.TextBox textBox_password;
-        private System.Windows.Forms.Label labelheaderlogin;
-        private System.Windows.Forms.Button button_cancel;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
-

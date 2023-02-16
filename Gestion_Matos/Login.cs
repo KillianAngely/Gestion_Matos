@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -13,54 +12,59 @@ using System.Windows.Forms;
 
 namespace Gestion_Matos
 {
-    public partial class Form_login_window : Form
+    public partial class Login : Form
     {
-
         SqlConnection conn = new SqlConnection(@"Server=.\SQLEXPRESS;Database=Gestion_matos;Trusted_Connection=True");
-
-        public Form_login_window()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void button_connexion_Click(object sender, EventArgs e)
+        private void buttonAdd_Click(object sender, EventArgs e)
         {
-
-            this.Close();
-            // aaaaaaaaaaaaaaaaaaaaaaaaa
-
-
-
-            string UsernameValue, PasswordValue;
-            UsernameValue = textBox_login.Text;
-            PasswordValue = textBox_password.Text;
+            string username = textBoxName.Text;
+            string password = textBoxPassword.Text;
 
             try
             {
-                String querry = ("Select * from Login where Name ='" + textBox_login.Text+"'And Password ='"+textBox_password.Text+"'");
-                SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
-                DataTable dtable = new DataTable();
-                sda.Fill(dtable);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Password FROM Login WHERE Name = @Username", conn);
+                cmd.Parameters.AddWithValue("@Username", username);
 
-                if (dtable.Rows.Count > 0)
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
                 {
-                    UsernameValue = textBox_login.Text;
-                    PasswordValue = textBox_password.Text;
-                    this.Hide();
+                    string hashedPassword = reader.GetString(0);
+
+                    // Compute hash of the entered password
+                    byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
+                    using (SHA256 sha256 = SHA256.Create())
+                    {
+                        byte[] hashBytes = sha256.ComputeHash(passwordBytes);
+                        string hashedInputPassword = BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+
+                        if (hashedInputPassword == hashedPassword)
+                        {
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Username or Password is incorrect");
+                        }
+                    }
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("SQL Error failed to connect.");
+                MessageBox.Show(ex.Message);
             }
             finally
             {
                 conn.Close();
             }
-          
         }
 
-        private void button_cancel_Click(object sender, EventArgs e)
+        private void buttonCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

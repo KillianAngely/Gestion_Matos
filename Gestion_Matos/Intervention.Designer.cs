@@ -28,233 +28,188 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.buttonRemoveInst = new System.Windows.Forms.Button();
-            this.buttonModifyInst = new System.Windows.Forms.Button();
-            this.buttonAddInt = new System.Windows.Forms.Button();
-            this.labelDateInterventions = new System.Windows.Forms.Label();
-            this.labelTechnician = new System.Windows.Forms.Label();
-            this.labelMaterial = new System.Windows.Forms.Label();
-            this.labelSiteInt = new System.Windows.Forms.Label();
-            this.labelheaderInterventions = new System.Windows.Forms.Label();
-            this.dateTimePickerinter = new System.Windows.Forms.DateTimePicker();
-            this.labelcomment = new System.Windows.Forms.Label();
-            this.comboBoxmaterint = new System.Windows.Forms.ComboBox();
-            this.comboBoxtechInt = new System.Windows.Forms.ComboBox();
-            this.textBoxComment = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBoxSite = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxMaterial = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxType = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxCustomers = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxtechnician = new System.Windows.Forms.TextBox();
+            this.dateTimePickerInter = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // buttonClose
+            // listBox1
             // 
-            this.buttonClose.Location = new System.Drawing.Point(531, 548);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(302, 68);
-            this.buttonClose.TabIndex = 29;
-            this.buttonClose.Text = "Close";
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(12, 85);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(334, 384);
+            this.listBox1.TabIndex = 0;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // buttonRemoveInst
+            // textBox1
             // 
-            this.buttonRemoveInst.Location = new System.Drawing.Point(174, 548);
-            this.buttonRemoveInst.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonRemoveInst.Name = "buttonRemoveInst";
-            this.buttonRemoveInst.Size = new System.Drawing.Size(147, 68);
-            this.buttonRemoveInst.TabIndex = 28;
-            this.buttonRemoveInst.Text = "Remove";
-            this.buttonRemoveInst.UseVisualStyleBackColor = true;
-            this.buttonRemoveInst.Click += new System.EventHandler(this.buttonRemoveInst_Click);
+            this.textBox1.Location = new System.Drawing.Point(378, 283);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(394, 126);
+            this.textBox1.TabIndex = 1;
             // 
-            // buttonModifyInst
+            // label1
             // 
-            this.buttonModifyInst.Location = new System.Drawing.Point(330, 548);
-            this.buttonModifyInst.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonModifyInst.Name = "buttonModifyInst";
-            this.buttonModifyInst.Size = new System.Drawing.Size(147, 68);
-            this.buttonModifyInst.TabIndex = 27;
-            this.buttonModifyInst.Text = "Modify";
-            this.buttonModifyInst.UseVisualStyleBackColor = true;
-            this.buttonModifyInst.Click += new System.EventHandler(this.buttonModifyInst_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(378, 257);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Comment";
             // 
-            // buttonAddInt
+            // label2
             // 
-            this.buttonAddInt.Location = new System.Drawing.Point(18, 548);
-            this.buttonAddInt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonAddInt.Name = "buttonAddInt";
-            this.buttonAddInt.Size = new System.Drawing.Size(147, 68);
-            this.buttonAddInt.TabIndex = 26;
-            this.buttonAddInt.Text = "Add";
-            this.buttonAddInt.UseVisualStyleBackColor = true;
-            this.buttonAddInt.Click += new System.EventHandler(this.buttonAddInt_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(378, 191);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Material";
             // 
-            // labelDateInterventions
+            // textBoxMaterial
             // 
-            this.labelDateInterventions.AutoSize = true;
-            this.labelDateInterventions.Location = new System.Drawing.Point(527, 117);
-            this.labelDateInterventions.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDateInterventions.Name = "labelDateInterventions";
-            this.labelDateInterventions.Size = new System.Drawing.Size(105, 20);
-            this.labelDateInterventions.TabIndex = 21;
-            this.labelDateInterventions.Text = "Interventions:";
+            this.textBoxMaterial.Location = new System.Drawing.Point(378, 217);
+            this.textBoxMaterial.Multiline = true;
+            this.textBoxMaterial.Name = "textBoxMaterial";
+            this.textBoxMaterial.ReadOnly = true;
+            this.textBoxMaterial.Size = new System.Drawing.Size(192, 35);
+            this.textBoxMaterial.TabIndex = 3;
             // 
-            // labelTechnician
+            // label3
             // 
-            this.labelTechnician.AutoSize = true;
-            this.labelTechnician.Location = new System.Drawing.Point(527, 257);
-            this.labelTechnician.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelTechnician.Name = "labelTechnician";
-            this.labelTechnician.Size = new System.Drawing.Size(89, 20);
-            this.labelTechnician.TabIndex = 20;
-            this.labelTechnician.Text = "Technician:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(596, 194);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Type";
             // 
-            // labelMaterial
+            // textBoxType
             // 
-            this.labelMaterial.AutoSize = true;
-            this.labelMaterial.Location = new System.Drawing.Point(527, 184);
-            this.labelMaterial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelMaterial.Name = "labelMaterial";
-            this.labelMaterial.Size = new System.Drawing.Size(69, 20);
-            this.labelMaterial.TabIndex = 19;
-            this.labelMaterial.Text = "Material:";
+            this.textBoxType.Location = new System.Drawing.Point(580, 217);
+            this.textBoxType.Multiline = true;
+            this.textBoxType.Name = "textBoxType";
+            this.textBoxType.ReadOnly = true;
+            this.textBoxType.Size = new System.Drawing.Size(192, 35);
+            this.textBoxType.TabIndex = 5;
             // 
-            // labelSiteInt
+            // label4
             // 
-            this.labelSiteInt.AutoSize = true;
-            this.labelSiteInt.Location = new System.Drawing.Point(527, 328);
-            this.labelSiteInt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSiteInt.Name = "labelSiteInt";
-            this.labelSiteInt.Size = new System.Drawing.Size(41, 20);
-            this.labelSiteInt.TabIndex = 18;
-            this.labelSiteInt.Text = "Site:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(378, 127);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Customers";
             // 
-            // labelheaderInterventions
+            // textBoxCustomers
             // 
-            this.labelheaderInterventions.AutoSize = true;
-            this.labelheaderInterventions.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelheaderInterventions.Location = new System.Drawing.Point(346, 42);
-            this.labelheaderInterventions.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelheaderInterventions.Name = "labelheaderInterventions";
-            this.labelheaderInterventions.Size = new System.Drawing.Size(182, 33);
-            this.labelheaderInterventions.TabIndex = 17;
-            this.labelheaderInterventions.Text = "Interventions";
+            this.textBoxCustomers.Location = new System.Drawing.Point(378, 153);
+            this.textBoxCustomers.Multiline = true;
+            this.textBoxCustomers.Name = "textBoxCustomers";
+            this.textBoxCustomers.ReadOnly = true;
+            this.textBoxCustomers.Size = new System.Drawing.Size(192, 35);
+            this.textBoxCustomers.TabIndex = 7;
             // 
-            // dateTimePickerinter
+            // label5
             // 
-            this.dateTimePickerinter.Location = new System.Drawing.Point(532, 143);
-            this.dateTimePickerinter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePickerinter.Name = "dateTimePickerinter";
-            this.dateTimePickerinter.Size = new System.Drawing.Size(300, 26);
-            this.dateTimePickerinter.TabIndex = 31;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(580, 127);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Technician";
             // 
-            // labelcomment
+            // textBoxtechnician
             // 
-            this.labelcomment.AutoSize = true;
-            this.labelcomment.Location = new System.Drawing.Point(534, 400);
-            this.labelcomment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelcomment.Name = "labelcomment";
-            this.labelcomment.Size = new System.Drawing.Size(82, 20);
-            this.labelcomment.TabIndex = 32;
-            this.labelcomment.Text = "Comment:";
+            this.textBoxtechnician.Location = new System.Drawing.Point(580, 153);
+            this.textBoxtechnician.Multiline = true;
+            this.textBoxtechnician.Name = "textBoxtechnician";
+            this.textBoxtechnician.ReadOnly = true;
+            this.textBoxtechnician.Size = new System.Drawing.Size(192, 35);
+            this.textBoxtechnician.TabIndex = 9;
             // 
-            // comboBoxmaterint
+            // dateTimePickerInter
             // 
-            this.comboBoxmaterint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxmaterint.FormattingEnabled = true;
-            this.comboBoxmaterint.Location = new System.Drawing.Point(532, 208);
-            this.comboBoxmaterint.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBoxmaterint.Name = "comboBoxmaterint";
-            this.comboBoxmaterint.Size = new System.Drawing.Size(300, 28);
-            this.comboBoxmaterint.TabIndex = 34;
-            this.comboBoxmaterint.SelectedIndexChanged += new System.EventHandler(this.comboBoxmaterint_SelectedIndexChanged);
+            this.dateTimePickerInter.Location = new System.Drawing.Point(378, 85);
+            this.dateTimePickerInter.Name = "dateTimePickerInter";
+            this.dateTimePickerInter.Size = new System.Drawing.Size(394, 26);
+            this.dateTimePickerInter.TabIndex = 11;
             // 
-            // comboBoxtechInt
+            // comboBox1
             // 
-            this.comboBoxtechInt.FormattingEnabled = true;
-            this.comboBoxtechInt.Location = new System.Drawing.Point(532, 282);
-            this.comboBoxtechInt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBoxtechInt.Name = "comboBoxtechInt";
-            this.comboBoxtechInt.Size = new System.Drawing.Size(300, 28);
-            this.comboBoxtechInt.TabIndex = 35;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(378, 441);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(394, 28);
+            this.comboBox1.TabIndex = 12;
             // 
-            // textBoxComment
+            // label6
             // 
-            this.textBoxComment.Location = new System.Drawing.Point(534, 426);
-            this.textBoxComment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxComment.Multiline = true;
-            this.textBoxComment.Name = "textBoxComment";
-            this.textBoxComment.Size = new System.Drawing.Size(298, 82);
-            this.textBoxComment.TabIndex = 36;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 117);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(496, 391);
-            this.dataGridView1.TabIndex = 37;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // textBoxSite
-            // 
-            this.textBoxSite.Location = new System.Drawing.Point(532, 353);
-            this.textBoxSite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxSite.Name = "textBoxSite";
-            this.textBoxSite.ReadOnly = true;
-            this.textBoxSite.Size = new System.Drawing.Size(300, 26);
-            this.textBoxSite.TabIndex = 38;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(378, 418);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 20);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Inter_state";
             // 
             // WindowIntervention
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 694);
-            this.Controls.Add(this.textBoxSite);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBoxComment);
-            this.Controls.Add(this.comboBoxtechInt);
-            this.Controls.Add(this.comboBoxmaterint);
-            this.Controls.Add(this.labelcomment);
-            this.Controls.Add(this.dateTimePickerinter);
-            this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.buttonRemoveInst);
-            this.Controls.Add(this.buttonModifyInst);
-            this.Controls.Add(this.buttonAddInt);
-            this.Controls.Add(this.labelDateInterventions);
-            this.Controls.Add(this.labelTechnician);
-            this.Controls.Add(this.labelMaterial);
-            this.Controls.Add(this.labelSiteInt);
-            this.Controls.Add(this.labelheaderInterventions);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dateTimePickerInter);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBoxtechnician);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxCustomers);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBoxType);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxMaterial);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listBox1);
             this.Name = "WindowIntervention";
             this.Text = "Intervention";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.WindowIntervention_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Button buttonRemoveInst;
-        private System.Windows.Forms.Button buttonModifyInst;
-        private System.Windows.Forms.Button buttonAddInt;
-        private System.Windows.Forms.Label labelDateInterventions;
-        private System.Windows.Forms.Label labelTechnician;
-        private System.Windows.Forms.Label labelMaterial;
-        private System.Windows.Forms.Label labelSiteInt;
-        private System.Windows.Forms.Label labelheaderInterventions;
-        private System.Windows.Forms.DateTimePicker dateTimePickerinter;
-        private System.Windows.Forms.Label labelcomment;
-        private System.Windows.Forms.ComboBox comboBoxmaterint;
-        private System.Windows.Forms.ComboBox comboBoxtechInt;
-        private System.Windows.Forms.TextBox textBoxComment;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBoxSite;
+
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxMaterial;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxType;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxCustomers;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxtechnician;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label6;
+        protected System.Windows.Forms.DateTimePicker dateTimePickerInter;
     }
 }

@@ -44,6 +44,7 @@
             this.buttonSites = new System.Windows.Forms.Button();
             this.groupBoxCustomers = new System.Windows.Forms.GroupBox();
             this.buttonCustomers = new System.Windows.Forms.Button();
+            this.buttonNew_User = new System.Windows.Forms.Button();
             this.groupBoxProducts.SuspendLayout();
             this.groupBoxIntervention.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -220,11 +221,24 @@
             this.buttonCustomers.UseVisualStyleBackColor = true;
             this.buttonCustomers.Click += new System.EventHandler(this.buttonCustomers_Click);
             // 
+            // buttonNew_User
+            // 
+            this.buttonNew_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNew_User.Location = new System.Drawing.Point(657, 407);
+            this.buttonNew_User.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonNew_User.Name = "buttonNew_User";
+            this.buttonNew_User.Size = new System.Drawing.Size(286, 71);
+            this.buttonNew_User.TabIndex = 6;
+            this.buttonNew_User.Text = "New user ";
+            this.buttonNew_User.UseVisualStyleBackColor = true;
+            this.buttonNew_User.Click += new System.EventHandler(this.buttonNew_User_Click);
+            // 
             // WindowDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 597);
+            this.Controls.Add(this.buttonNew_User);
             this.Controls.Add(this.label_name_gestion_matos);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.groupBoxIntervention);
@@ -265,5 +279,6 @@
         private System.Windows.Forms.Button buttonSites;
         private System.Windows.Forms.GroupBox groupBoxCustomers;
         private System.Windows.Forms.Button buttonCustomers;
+        private System.Windows.Forms.Button buttonNew_User;
     }
 }

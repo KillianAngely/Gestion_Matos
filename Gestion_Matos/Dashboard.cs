@@ -73,7 +73,13 @@ namespace Gestion_Matos
 
         private void WindowDashboard_Load(object sender, EventArgs e)
         {
-            Form_login_window dlg = new Form_login_window();
+            Login dlg = new Login();
+            dlg.ShowDialog();
+        }
+
+        private void buttonNew_User_Click(object sender, EventArgs e)
+        {
+            New_Connexion dlg = new New_Connexion();
             dlg.ShowDialog();
         }
     }

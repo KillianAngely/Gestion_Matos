@@ -72,17 +72,23 @@
     <Compile Include="Intervention.Designer.cs">
       <DependentUpon>Intervention.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Material.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Material.Designer.cs">
       <DependentUpon>Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New_Connexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_Connexion.Designer.cs">
+      <DependentUpon>New_Connexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,11 +122,14 @@
     <EmbeddedResource Include="Intervention.resx">
       <DependentUpon>Intervention.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Material.resx">
       <DependentUpon>Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_Connexion.resx">
+      <DependentUpon>New_Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
